@@ -1,108 +1,123 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock, paper, scissors
+[Live site](https://11bus11.github.io/lizard-spock-extension/)
 
-Welcome USER_NAME,
+This game is an extension of the classic Rock, paper, scissors game. This extension is used in the tv-show The Big Bang Theory. The additions in this version are "lizard" and "spock" (from Star Trek The Original Series). The rules copied from [The Big Bang Theory Wiki](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock) are:
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## UX - User Experience
 
-## Gitpod Reminders
+### User stories
+I want the user to:
+- Play an entertaining game.
+- Be able to choose how many points are needed to win a round.
+- See the rules at all times.
+- See scores and choices each round.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Colour
+I chose a dark blue colour and black for the backgrounds. The instruction page has a black background, and the page where you play the game has a dark blue one. The "game-window" has a black background with a light blue border to make it look like a screen inspired by Star Trek TOS (the original series). The buttons are either blue or red. Red is for the different choices, and blue is for the rest of the buttons. All text is white.
+![Colours main](assets/media/Spock_main_colours.png)
+![Colours buttons](assets/media/Spock_buttons_colours.png)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+#### Structure
+For the layout of the page, I chose to create a game window with a border around it. This is how a lot of remakes of older games look. The window is also shaped with round corners, just like the screens in Star Trek. I chose to have the rules accessible at all times due to this version/extension of the classic "Rock, paper, scissors" game. 
+#### Typography
+The font I chose is called Orbitron (the san serif version, since it is easier to read on a screen). The letters are shaped the same way they were in older games, but less pixelated. This gives the game a retro feel while not looking too old and pixelated. I found the font on 
 
-Another blue button should appear to click: _Open Browser_.
+## Features
+The game is simple with one starting page and one game page with 3 windows. One window for choosing how many points is needed to win a game, one for the game itself, and one for the result of the game. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Starting/instruction section
+This page was made to give the user instructions on how to play the game. In some games, especially older ones, you are not given all instructions on how to play the game. It is a lot of trial and error. Even if I want to give this game a retro feel, this is one of the things I do not want to replicate. An instruction page also keeps the user from getting frustrated and/or annoyed.
+![starting page](assets/media/start_comp.PNG)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### Game window
+When the user has chosen the points needed to win, they play the game itself. This is done on this window. When you choose one of the options you get to know who won the round and the winner gets one point. Then you click continue to play another round. this continues until you or the computer have enough points to win. When that happens the continue button sends you to the result window.
+![Game window](assets/media/game_comp.PNG)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+### Rules
+The rules are displayed as long as you are on the game.html page. Depending on which device you are on the placement might be a bit different, but the rules are always accessible. This is to avoid confusion since this game is from a tv-show that not everyone has seen. By always showing the rules I can avoid the user getting confused about why for example spock wins against rock. The information is right there and the user can understand the logic. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Features left to implement
+- I would like to add some more choices that the user can make.
+- And maybe make it possible for the user to play against a friend IRL.
 
-------
+## Testing
 
-## Release History
+### Device testing
+The game has been tested on multiple devices using the Mozilla dev tools. These are the devices:
+- iPhone SE (2:nd generation)
+- iPhone 11 (Pro + Pro Max)
+- iPhone 13 (Pro Max + Mini)
+- Samsung Galaxy Note 10
+- Samsung Galaxy S10/S10+
+- Samsung Galaxy S20
+- iPad
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The game was also tested (natively) on these devices:
+- iPhone SE (2:nd generation)
+- Samsung Galaxy S9
+- iPad
+- ACER Aspire 5 15-inch (laptop)
+- Desktop computer (Windows 10)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Peer review
+I asked some people I know to test the game. They found some small issues with the media queries but did not find much wrong with the game logic.
+One of the people I asked said that they liked the retro style of the game. Another person said it would be nice to get some feedback on how many points are chosen. This was later implemented.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Game logic testing
+I tested the game logic multiple times. The part where your choice and the computer's choice are compared was tested the most. Each possible combination was tested to make sure the result was correct. Every other part of the game was tested similarly.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Validator testing
+#### Code
+- Put the JavaScript through jshint. It came up with some warnings. I had forgotten some semi-colons and had added some in places it was not needed. This is now fixed. No errors left.
+- The CSS was validated in the official Jigsaw validator. No problems were found.
+![CSS validation](assets/media/spock_css_validation.PNG)
+- The HTML was tested in the w3c validator. No problems were found.
+![HTML validation](assets/media/spock_HTMLgame_validation.PNG)
+![HTML validation](assets/media/spock_HTMLindex_validation.PNG)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Lighthouse
+This was the lighthouse result:
+![Lighthouse](assets/media/spock_lighthouse.PNG)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Contrast and more
+I checked all colours in the [accessibility checker](https://www.accessibilitychecker.org/color-contrast-checker/). Their colour contrast checker tells you if the background and foreground (the text) have a large enough contrast. If it does not have enough contrast, it will be very hard for people with bad eyesight to read.
+- Validation for the dark blue background.
+![dark blue background validation](assets/media/dark_blue_contrast.PNG)
+- Validation for the black background.
+![black background validation](assets/media/black_contrast.PNG)
+- Validation for the blue buttons.
+![blue button validation](assets/media/blue_contrast.PNG)
+- Validation for the red buttons.
+![red button validation](assets/media/red_contrast.PNG)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Fixed bugs
+- 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Deployment
+This game was deployed to github pages.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Open the repository settings.
+- Go to "pages" (found under "code and automation").
+- Choose which branch to build from. You want to choose "main". Do not forget to save the settings.
+- (If needed, choose a custom domain)
+- Open the repository in github desktop (I used github desktop. You can do this in git too.)
+- Choose to create a local clone (the first time you open your repository in github desktop, there should be a window asking if you want to create a clone)
+- Copy the link to your deployed website (which can be found in the github pages settings, where you chose which branch to build from) and make sure it is operating as expected.
+- The deployed website will now be updated when you push anything new to the repository.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Forking and cloning
+- Forking is creating a new repository with the same content as the one you forked. 
+    - This is done by going to the repository you want to clone, and clicking the "fork" icon in the top right corner.
+- Cloning is used for making local copies of your code.
+    - Cloning a repository with github desktop is easily done by clicking the green "code" button and choosing the "open in github desktop" option. If you do not have a clone already, github desktop will ask if you want to create a local clone. Click yes.
+    - If you do it with git you have to write "git clone" and then specify what you want to clone.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Credits
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
