@@ -31,3 +31,18 @@ function computerTurn(){
       break;
   }
 }
+//results of inputs//
+function checkWinner(){
+  if(player == computer){
+    return "Draw!";
+  }
+  else if(computer == "ROCK"){
+    return (player == "PAPER") ? "You Win!" : "You Lose!"
+  }
+  else if(computer == "PAPER"){
+    return (player == "SCISSORS") ? "You Win!" : "You Lose!"
+  }
+  else if(computer == "SCISSORS"){
+    return (player == "ROCK") ? "You Win!" : "You Lose!"
+  }
+}
