@@ -33,3 +33,8 @@ body{
     height: 125px;
     width: 125px;
 }
+.cta {
+    color: #fff;
+    margin-bottom: 40px; 
+    padding: 0; 
+ }
