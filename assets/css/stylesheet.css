@@ -38,3 +38,9 @@ body{
     margin-bottom: 40px; 
     padding: 0; 
  }
+ /*footer resizing*/
+ @media(max-width:700px){
+    .cta {
+        font-size: 24px;
+    }
+ }
