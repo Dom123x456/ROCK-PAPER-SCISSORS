@@ -28,3 +28,8 @@ body{
 #computerText{
     color: red;
 }
+/*images resizing*/
+.imgs{
+    height: 125px;
+    width: 125px;
+}
