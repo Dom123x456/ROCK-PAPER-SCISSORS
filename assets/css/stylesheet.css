@@ -37,6 +37,11 @@ body{
     height: 400px;
     width: 400px;
 }
+p{
+    color:black;
+    text-align: center;
+}
+
 .cta {
     color: #fff;
     margin-bottom: 40px; 
