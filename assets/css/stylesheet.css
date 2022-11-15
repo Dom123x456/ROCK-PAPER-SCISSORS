@@ -33,6 +33,10 @@ body{
     height: 125px;
     width: 125px;
 }
+.rules{
+    height: 400px;
+    width: 400px;
+}
 .cta {
     color: #fff;
     margin-bottom: 40px; 
