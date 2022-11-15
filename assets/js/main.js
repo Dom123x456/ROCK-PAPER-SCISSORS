@@ -6,3 +6,11 @@ let player;
 let computer;
 let result;
 //button click plays choice and is translated into text for the player computer and result//
+choiceBtns.forEach(button => button.addEventListener("click", () => {
+
+  player = button.textContent;
+  computerTurn();
+  playerText.textContent = `Player: ${player}`;
+  computerText.textContent = `Computer: ${computer}`;
+  resultText.textContent = checkWinner();
+}));
