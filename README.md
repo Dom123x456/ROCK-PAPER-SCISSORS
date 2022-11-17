@@ -1,4 +1,4 @@
-# Rock, paper, scissors
+# Rock, Paper, Scissors
 [Live site](https://dom123x456.github.io/ROCK-PAPER-SCISSORS/)
 
 This game is a classic Rock, paper, scissors game. with a rudemntory rule of playing against the computer 1 game matches deciding in a win draw or lose. 
